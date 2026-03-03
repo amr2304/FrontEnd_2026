@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UFT-8">
+  <meta name="viewport" contente"width=device-width,initial-scale=1.0>
+  <title>Material de estudo digital</title>
+</head>
+<style>
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #00ff00;
+}
+pre {
+    background-color: black;
+    color: #00ff00;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+strong {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+}
+hr {
+    margin: 30px 0;
+}
+div {
+    width: 80%;
+    margin: auto;
+}</style>
+  </head>
+  <body>
+    <nav>
+         <a href="#Sobre" target="_self">Sobre</a>
+         <a href="#Lógica de Programação em C" target="_self">Lógica de Programação em C</a>
+         <a href="#Questionário" target="_self">Questionário</a>
+    </nav>
+        <div id="Sobre">
+          <h3>Nome: André Marques Ribeiro</h3>
+          <h3>E-mail:andre.ribeiro23042007@gmail.com</h3>
+          <h3>Estudante de engenharia de software</h3>
+        </div>
+
+        <hr>
+
+        <div id="Lógica de Programação em C">
+          <strong>1-Estrutura Básica</strong>
+            <pre>
+                 #include <stdio.h>
+                 int main(){
+                  
+                  return 0;
+                 }
+             </pre>
+             <h3>#include -inclui biblioteca</h3>
+             <h3>main() -função principal</h3>
+             <h3>return 0; -fim do programa</h3>
+ <hr>
+
+           <strong>2-Variáveis</strong>
+            <pre>
+            int idade; //inteiros
+            float altura; //decimais 
+            double salario; //decimais com mais precisão
+            char letra; //palavras ou letras
+           </pre>
+<hr>
+          <strong>3-Entrada e saída</strong>
+          <pre>
+               <strong> Saída</strong>
+               printf("Olá\n");
+               printf("%d",idade);
+             
+               <strong> Entrada</strong>
+               scanf("%d", &idade);
+               %d -> int
+               %f -> float
+               %lf -> double
+               %c -> caractere
+               %s -> string
+         </pre>
+
+<hr>
+
+          <strong>4-Operadores</strong>
+          <pre>
+           Aritméticos
+           + - * / %  // + maior; - menor; * multiplicação ; / divisão ; % resto da divisão
+           Relacionais
+           > < >= <= == !=  // > maior que; < menor que; >= maior que ou igual a; < menor que ou igual a; == igual; != diferente
+           Lógicos 
+           && || !  //&& -> E; || -> OU; ! -> FALSO; 
+          </pre>
+<hr>
+
+<strong>5-Condicionais</strong>
+<pre>
+if / else
+
+if(idade >= 18){
+    printf("Maior de idade");
+}else{
+    printf("Menor de idade");
+}
+
+switch
+
+switch(opcao){
+    case 1:
+        printf("Opção 1");
+        break;
+    case 2:
+        printf("Opção 2");
+        break;
+    default:
+        printf("Opção inválida");
+}
+</pre>
+
+<hr>
+
+<strong>6-Repetição</strong>
+<pre>
+for
+
+for(int i = 0; i < 5; i++){
+    printf("%d", i);
+}
+
+while
+
+while(numero != 0){
+    scanf("%d", &numero);
+}
+
+do while
+
+do{
+    printf("Executa pelo menos uma vez");
+}while(condicao);
+</pre>
+
+<hr>
+
+<strong>7-Vetores</strong>
+<pre>
+int numeros[5];
+
+int notas[3] = {7,8,9};
+
+for(int i = 0; i < 3; i++){
+    printf("%d", notas[i]);
+}
+</pre>
+
+<hr>
+
+<strong>8-Funções</strong>
+<pre>
+Função sem retorno
+
+void mensagem(){
+    printf("Olá");
+}
+
+Função com retorno
+
+int soma(int a, int b){
+    return a + b;
+}
+
+Chamando função
+
+int resultado = soma(5,3);
+</pre>
+
+<hr>
+
+<strong>9-Ponteiros</strong>
+<pre>
+int x = 10;
+int *p = &x;
+
+&x  -> endereço de memória
+*p  -> valor armazenado
+</pre>
+
+<hr>
+
+<strong>10-Struct</strong>
+<pre>
+struct Aluno{
+    char nome[20];
+    int idade;
+};
+
+struct Aluno a1;
+a1.idade = 20;
+</pre>
+
+<hr>
+
+<strong>11-Alocação Dinâmica</strong>
+<pre>
+#include &lt;stdlib.h&gt;
+
+int *vetor;
+
+vetor = malloc(5 * sizeof(int));
+
+free(vetor);
+</pre>
+
+<hr>
+
+<strong>Organização Básica</strong>
+<pre>
+1- Declarar variáveis
+2- Ler dados
+3- Processar
+4- Mostrar resultado
+</pre>
+
+<hr>
+<div id="Questionário">
+<strong>Questionário</strong>
+
+<form>
+
+<p>1) Onde o programa em C começa a executar?</p>
+<input type="radio" name="q1"> a) start() <br>
+<input type="radio" name="q1"> b) main() <br>
+<input type="radio" name="q1"> c) execute() <br>
+<input type="radio" name="q1"> d) begin() <br>
+
+<hr>
+
+<p>2) Qual especificador correto para ler um double no scanf?</p>
+<input type="radio" name="q2"> a) %f <br>
+<input type="radio" name="q2"> b) %d <br>
+<input type="radio" name="q2"> c) %lf <br>
+<input type="radio" name="q2"> d) %c <br>
+
+<hr>
+
+<p>3) Qual estrutura é usada quando sabemos exatamente quantas vezes o código vai repetir?</p>
+<input type="radio" name="q3"> a) if <br>
+<input type="radio" name="q3"> b) while <br>
+<input type="radio" name="q3"> c) for <br>
+<input type="radio" name="q3"> d) switch <br>
+
+<hr>
+
+<p>4) O que o operador && representa?</p>
+<input type="radio" name="q4"> a) OU lógico <br>
+<input type="radio" name="q4"> b) E lógico <br>
+<input type="radio" name="q4"> c) Igualdade <br>
+<input type="radio" name="q4"> d) Negação <br>
+
+<hr>
+
+<p>5) Para que serve o símbolo & no scanf?</p>
+<input type="radio" name="q5"> a) Finalizar programa <br>
+<input type="radio" name="q5"> b) Multiplicar valores <br>
+<input type="radio" name="q5"> c) Pegar o endereço da variável <br>
+<input type="radio" name="q5"> d) Imprimir valor <br>
+
+<br><br>
+<input type="submit" value="Enviar Respostas">
+
+</form>
+
+</div>
+       
+ </body>
+</html>
