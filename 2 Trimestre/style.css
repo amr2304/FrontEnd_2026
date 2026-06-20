@@ -1,0 +1,49 @@
+body {
+    background-color: lightgray;
+    font-family: Monteserrat, sans-serif;
+}
+
+header {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.secao {
+    background-color: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: darkgreen;
+    font-size: 24px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+nav {
+    border-radius: 10px;
+    width: 100%;
+    height:100px;
+    font-family: Monteserrat, sans-serif;
+    display: flex;
+    background-color: #333;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: grey;
+}

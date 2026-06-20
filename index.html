@@ -4,46 +4,155 @@
     <meta charset="UTF-8">
     <title>Meus Trabalhos</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin-top: 100px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
         }
-        h1 {
-            color: #333;
-        }
+
         .container {
-            background: white;
-            padding: 30px;
-            margin: auto;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            width: 100%;
         }
+
+        .trimestre {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        details {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            border: 1px solid #e5e5e5;
+        }
+
+        details:hover {
+            border-color: #d0d0d0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 18px 20px;
+            background: #f8f8f8;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: all 0.2s ease;
+            list-style: none;
+        }
+
+        summary:hover {
+            background: #f0f0f0;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 20px;
+            font-weight: 300;
+            color: #666;
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .conteudo {
+            padding: 0;
+            animation: slideDown 0.2s ease forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
+            }
+            to {
+                opacity: 1;
+                max-height: 500px;
+            }
+        }
+
         a {
             display: block;
-            margin: 15px 0;
+            padding: 12px 20px;
             text-decoration: none;
-            color: white;
-            background-color: #007BFF;
-            padding: 10px;
-            border-radius: 5px;
+            color: #333333;
+            border-top: 1px solid #f0f0f0;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
+
         a:hover {
-            background-color: #0056b3;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            padding-left: 24px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
+    <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
         <h1>Meus Trabalhos</h1>
-        <a href="trabalho2.html">1 - Trabalho </a>
-        <a href="trabalho3.html">2 - Trabalho </a>
-        <a href="atividade4.html">3 - Trabalho </a>
-        <a href="atividade5.html">4 -Trabalho </a>
-    </div>
+        <div class="container">
+            <div class="trimestre" style="align-items: left;">
+                <details>
+                    <summary>1º Trimestre</summary>
+                    <div class="conteudo">
+                        <a href="/1 Trimestre/trabalho2.html" target="_blank">Trabalho 1</a>
+                        <a href="/1 Trimestre/trabalho3.html" target="_blank">Trabalho 2</a>
+                        <a href="/1 Trimestre/atividade4.html" target="_blank">Trabalho 3</a>
+                        <a href="/1 Trimestre/atividade.html" target="_blank">Trabalho 4</a>
+                        <a href="/1 Trimestre/bicinho.html" target="_blank">Atividade JS</a>
+                    </div>
+                </details>
+            </div>
 
+            <div class="trimestre" style="align-items: right;">
+                <details>
+                    <summary>2º Trimestre</summary>
+                    <div class="conteudo">
+                        <a href="/2 Trimestre/Copa.html" target="_blank">Prova</a>
+                        <a href="/2 Trimestre/questao_04.html" target="_blank">Prova - Questão 4</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

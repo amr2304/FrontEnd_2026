@@ -1,0 +1,51 @@
+ ul {
+                display:flex;
+                background-color:#333333;
+                border-radius:12px;
+                font-family:Arial,sans-serif;
+                justify-content: space-around;
+                box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+                height: 20px;
+}
+a {
+   color:white;
+}
+body{ 
+font-family:Arial,sans-serif;
+}
+ h1{
+    font-size:30px;
+}
+ h2{
+ font-size:25px;
+}
+ h3 {
+  font-size:15px;
+}
+p {
+ font-size:15px;
+}
+
+table{
+      border-collapse:collapse; 
+     
+}
+
+table thead th {
+      background-color: #333333;
+      color: #fff; 
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+      
+}    
+form {
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+      border-collapse:collapse;
+      font-family:"Montserrat",sans-serif;
+      border-radius:12px; 
+}
+footer{
+      background-color: #333333;
+      border-radius:8px;
+      font-family:"Montserrat",sans-serif;
+      color: white;
+}

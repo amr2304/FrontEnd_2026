@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 04</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Monteserrat, sans-serif;
+        }
+
+        .player-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            padding: 32px;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #img-jogador {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .placeholder {
+            background-color: #dde1e7;
+            border-radius: 6px;
+            color: transparent;
+            user-select: none;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .card-text {
+            color: #2c2c2c;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .info-label {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .player-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 16px;
+        }
+
+        /* Badge de rank */
+        .rank-badge {
+            display: inline-block;
+            background-color: #f5c518;
+            color: #003366;
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+
+        /* Botão revelar */
+        #btn-revelar {
+            margin-top: 24px;
+            background-color: #1a7f4e;
+            border: none;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 10px 30px;
+            border-radius: 8px;
+        }
+
+        #btn-revelar:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player-card">
+
+        <img id="img-jogador" src="/2 Trimestre/img/img_.svg" alt="Jogador">
+
+        <p class="player-name">
+            <span id="span-nome" class="placeholder">??? ??? ??? ??? ???</span>
+        </p>
+
+        <p class="info-label">Data de Nascimento</p>
+        <p><span id="span-nascimento" class="placeholder">??/??/????</span></p>
+
+        <p class="info-label">Altura</p>
+        <p><span id="span-altura" class="placeholder">?.?? m</span></p>
+
+        <p class="info-label">Posição</p>
+        <p><span id="span-posicao" class="placeholder">?????</span></p>
+
+        <p class="info-label">Rank</p>
+        <p>
+            <span id="span-rank" class="placeholder rank-badge">??.?</span>
+        </p>
+        <button id="btn-revelar" class="btn btn-success" onclick="revelar()">
+             Revelar
+        </button>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

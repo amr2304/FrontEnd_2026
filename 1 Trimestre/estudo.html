@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imag{
+            text-align:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+        }
+    </style>
+</head>
+<body>
+    <div class="imag" id="imagem">
+     <h1>A Imagem deve estar aqui</h1>
+     <button onclick="Alternar()">DOIS EM UM</button>
+    </div>
+    <script>
+        let img = document.querySelector(".imag")
+        img.innerHTML +="<img id='foto' src='feliz.png'>";
+        
+        function Alternar(){
+            let foto = document.getElementById("foto")
+            
+            if(foto.src.includes("feliz.png")){
+                foto.src="puto.png"
+            } else{
+                foto.src="feliz.png"
+            }
+            
+        };
+       
+    </script>
+</body>
+</html>
